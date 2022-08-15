@@ -1,0 +1,8 @@
+.title {
+  background: rgb(121, 242, 157);
+}
+.test1{
+  /* background: url("../../assets/images/bg.jpg"); */
+  /* background: url("~@/assets/images/bg.jpg"); */
+  background: url("/img/bg.jpg");
+}

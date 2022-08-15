@@ -1,0 +1,50 @@
+@width: 100px;
+@height: @width - 80px;
+
+.header {
+  width: @width;
+  height: @height;
+  background: red;
+}
+
+.bordered (@topW: 1px, @bottomW: 2px) {
+  border-top: dotted @topW black;
+  border-bottom: solid @bottomW black;
+}
+
+#a1 {
+  color: #111;
+  .bordered();
+}
+
+.a2 {
+  color: red;
+  .bordered(2px, 4px);
+  // border-bottom: solid 5px black; //覆盖混合
+}
+
+.nesting {
+  color: blue;
+  h3 {
+    color: coral;
+  }
+  p {
+    color: aqua;
+  }
+}
+
+.parent {
+  color: blue;
+  &:hover {
+    color: green;
+  }
+}
+
+.bars_right {
+  font-weight: bold;
+  :global {
+    .ant-btn {
+      border: 0;
+    }
+  }
+}
